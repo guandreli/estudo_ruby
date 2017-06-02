@@ -1,0 +1,87 @@
+MÓDULO 1
+
+Aula 04:
+- Referencia sobre o Ruby;
+- Filosofias do Ruby.
+
+Aula 05:
+- Aviso e como utilizar o Code Anyweare.
+
+Aula 06: Um pouco mais Sobre Gem's
+- Listar gem's
+gem list nome_da_gem (opcional)
+
+- Instalar gem
+gem install nome_da_gem -v (versão opcicional, se não por adiciona a mais atual)
+
+- Remover gem
+gem unistall nome_da_gem --version ou -v (versão opcicional, se não por pergunta qual quero remover)
+gem cleanup nome_da_gem (remove todas as versões, deixa apenas a mais atual)
+
+Aula 07:
+- Bundler (gerenciamento de Gem's)
+
+GemFile -> configura de onde serão pego as gem's
+bundle install (instala as gem's do repositório configurada no arquivo)
+
+Aula 08:
+- Subir o projeto
+Mostra como alterar o nome do projeto, como subir o projeto, baixar as versões desejadas entre outras.
+
+Subir o projeto (localhost:port) a porta é exibidad:
+-> rails s
+-> rails server
+
+Aula 09:
+- Estrutura das pastas
+Explica sobre as pastas, qual funcionalidade, qual a serventia de cada uma
+
+Aula 10:
+- Explica como "executar" ruby (ruby arquivo | irb | pry)
+
+ruby arquivo.rb || ruby arquivo (executa um aquivo)
+irb (codar no terminal)
+pry (semelhante ao irb, apenas colore as palavras reservadas)
+
+Aula 11:
+- Orientação a Objeto
+
+Classe -> Possui atributos e metodos, é o "esqueleto" a forma para a criação do objeto
+Objeto -> Objeto é a construção resultante da classe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -192,7 +192,17 @@ Aula 21:
 	rails s (coloca para execução local inicia na base de desenvolvimento)
 	rails s -e PRODUCTION / TEST (-e acessa a uma base, de produção ou teste)
 
+Aula 22:
+Prototipação (fazer um esboço de como ficaria o projeto)
+O professor utiliza o Pencil Project (pencil.evolus.vn)
 
+Aula 23:
+Modelagem de dados (modelagem do banco de dados)
+Professor utiliza o Oracle SQL Data Modeler
+Convenções:
+	-> Tableas em plurais
+	-> ID com auto increment
+	-> tabela_id para referenciar a outra tabela (foreign key)
 
 
 

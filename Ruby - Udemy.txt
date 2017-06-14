@@ -204,66 +204,24 @@ Convenções:
 	-> ID com auto increment
 	-> tabela_id para referenciar a outra tabela (foreign key)
 
+Aula 24:
+Arquitetura MVC (Model View Controller)
+	-> Model (modelo) são as regras, dados e como ele deve funcionar
+	-> View (visão) é a saida, como vou representar o dado
+	-> Controller (controlador), ele controla a ação do usuário
 
+Aula 25:
+CRUD (Create Read Update Delete)
+	-> Create (criar), seria o INSERT na tabela
+	-> Read (ler), é equivalente ao SELECT
+	-> Update (atualizar), é o proprio atualizar mesmo
+	-> Delete (deletar), é deletar mesmo
 
+Scaffold (andaime), auxilia na criação do BD do projeto
+	rails generate scaffold Banco nome_coluna:tipo_valor
+	rais g scaffold Banco nome_coluna:tipo_valor
+	
+	-> Banco no singular, e primeira letra maiuscula
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	rails g scaffold Exemplo e1:string
 

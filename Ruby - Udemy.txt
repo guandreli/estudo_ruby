@@ -225,3 +225,15 @@ Scaffold (andaime), auxilia na criação do BD do projeto
 
 	rails g scaffold Exemplo e1:string
 
+Aula 26:
+ORM (Object Relational Mapper), faz a relação do nosso objeto com o dado do banco de dados
+	ActiveRecord -> substitui um trexo de SQL (http://guides.rubyonrails.org/active_record_basics.html)
+	@exemplo = Exemplo.all -> faz o SELECT * FROM
+
+Migration, faz a migração e o controle dos dados criados pelo meu Scaffold para o banco de dados
+	reke db:create -> cria nosso banco de dados
+	rake db:migrete -> migra os scaffolds para o BD, cria as tabelas
+
+Aula 27:
+Acessando os controladores, relação da view com o controller
+	https://url-padrão/nome-do-controller

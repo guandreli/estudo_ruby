@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  
+  #get 'home/index' => 'phones#index'
+
+  root 'home#index'
+
   resources :phones
   resources :addresses
   resources :contacts

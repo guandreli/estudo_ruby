@@ -237,3 +237,53 @@ Migration, faz a migração e o controle dos dados criados pelo meu Scaffold para 
 Aula 27:
 Acessando os controladores, relação da view com o controller
 	https://url-padrão/nome-do-controller
+Lembrando da Arquitetura MVC
+A View é o que o usuário vê (alterações nas partes visuais são feitas aqui)
+Controller faz o controle das ações
+
+Aula 28:
+Criando controller
+	rails g controller nome_controller ação (na criação é mostrada a rota)
+Alterando a rota para cair na home
+	projeto/config/routs.rb (dentro do arquivo tem as dicas)
+
+Aula 29:
+ERB - Embedded Ruby (mistura codigo HTML com Ruby)
+	Para iniciar o Ruby dentro do HTML:
+	<% codigo %> (sem output, ou seja, sem saida de dados)
+	<%= codigo %> (tem output, saida de dados)
+
+Aula 30
+Helpers -> são tipo funções já definidas em Ruby, posso criar dentro de "app/helpers", dentro de um helper de um controller (vai funcionar só para aquele especificamente) ou no geral "application_helper" (funcionará para todos)
+
+api.rubyonrails.org (documentação oficial)
+apidock.com/rails (documentação mais contribuição)
+
+exemplo:
+	<%= link_to "nome", rota %> (substitui: <a href="rota">nome</a>)
+
+Aula 31:
+Configuração de rota
+
+
+Verbos HTTP
+	Get (mostra na url o a ação)
+	Post (esconde as informações)
+
+Devido as compicações o REST criou outros verbos
+	Put (mesmo de cima)
+	Get (mesmo de cima)
+	Delete (deletar)
+	Post (ler)
+O REST está intrinsecamente ligado aos resources
+
+Aula 32:
+Criando a caixa de seleção, helper: collection_select
+	collection_select(object, method, collection, value_method, text_method, options = {}, html_options = {})
+	object é a classe que vai receber o valor
+	method é campo que vai receber o valor
+	collection é de onde virao os dados
+	value_method é o valor que vai receber
+	text_method é o texto que vai aparecer para o usuário
+
+Para fazer isso alterei o _form.html.erb e o controller do que estou editando

@@ -1,24 +1,26 @@
-<p id="notice"><%= notice %></p>
+<%= form_for(@contact, html: { class: "basic-grey" }) do |f| %>
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @contact.nome %>
-</p>
+	<p>
+	  <strong>Nome:</strong>
+	  <%= @contact.nome %>
+	</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @contact.email %>
-</p>
+	<p>
+	  <strong>Email:</strong>
+	  <%= @contact.email %>
+	</p>
 
-<p>
-  <strong>Kind:</strong>
-  <%= @contact.kind.description %>
-</p>
+	<p>
+	  <strong>Kind:</strong>
+	  <%= @contact.kind.description %>
+	</p>
 
-<p>
-  <strong>Rmk:</strong>
-  <%= @contact.rmk %>
-</p>
+	<p>
+	  <strong>Rmk:</strong>
+	  <%= @contact.rmk %>
+	</p>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+	<%= link_to 'Edit', edit_contact_path(@contact), class: "button" %> |
+	<%= link_to 'Voltar', contacts_path, class: "button-back" %>
+<% end %>

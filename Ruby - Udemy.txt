@@ -287,3 +287,10 @@ Criando a caixa de seleção, helper: collection_select
 	text_method é o texto que vai aparecer para o usuário
 
 Para fazer isso alterei o _form.html.erb e o controller do que estou editando
+
+Aula 33:
+Partials (reutilização de codigo): arquivos com underline -> _partials
+	(convenção: criar uma pasta "shared" e colocar os partials lá | passar o caminho a partir da view)
+
+Aula 34:
+Mudança no Layout, HTML / CSS

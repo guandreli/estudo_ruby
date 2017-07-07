@@ -26,7 +26,7 @@
     display: block;
     margin: 0px;
 }
-.basic-grey div.field>label {
+.basic-grey label>span {
     float: left;
     width: 20%;
     text-align: right;
@@ -54,8 +54,8 @@
     padding: 5px 3px 3px 5px;
 }
 .basic-grey select {
-    background: #FFF image-url('down-arrow.png') no-repeat right;
-    background: #FFF image-url('down-arrow.png') no-repeat right;
+    background: #FFF url('down-arrow.png') no-repeat right;
+    background: #FFF url('down-arrow.png') no-repeat right);
     appearance:none;
     -webkit-appearance:none; 
     -moz-appearance: none;
@@ -69,7 +69,7 @@
     height:100px;
 }
 .basic-grey .button {
-    background: #4682B4;
+    background: #E27575;
     border: none;
     padding: 10px 25px 10px 25px;
     color: #FFF;
@@ -78,40 +78,6 @@
     text-shadow: 1px 1px 1px #9E3F3F;
     cursor: pointer;
 }
-
-.basic-grey .button-back {
-    background: #FF0000;
-    border: none;
-    padding: 10px 25px 10px 25px;
-    color: #FFF;
-    box-shadow: 1px 1px 5px #B6B6B6;
-    border-radius: 3px;
-    text-shadow: 1px 1px 1px #9E3F3F;
-    cursor: pointer;
-}
-
-.basic-grey .button-submit {
-    background: #006400;
-    border: none;
-    padding: 10px 25px 10px 25px;
-    color: #FFF;
-    box-shadow: 1px 1px 5px #B6B6B6;
-    border-radius: 3px;
-    text-shadow: 1px 1px 1px #9E3F3F;
-    cursor: pointer;
-}
-
-.basic-grey .button-home {
-    background: #2F4F4F;
-    border: none;
-    padding: 10px 25px 10px 25px;
-    color: #FFF;
-    box-shadow: 1px 1px 5px #B6B6B6;
-    border-radius: 3px;
-    text-shadow: 1px 1px 1px #9E3F3F;
-    cursor: pointer;
-}
-
 .basic-grey .button:hover {
     background: #CF7A7A
 }

@@ -15,10 +15,12 @@ class AddressesController < ApplicationController
   # GET /addresses/new
   def new
     @address = Address.new
+    contact_select
   end
 
   # GET /addresses/1/edit
   def edit
+    contact_select
   end
 
   # POST /addresses
@@ -62,6 +64,9 @@ class AddressesController < ApplicationController
   end
 
   private
+    def contact_select
+      @contacts_select_all = Contact.order(:nome)
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_address
       @address = Address.find(params[:id])

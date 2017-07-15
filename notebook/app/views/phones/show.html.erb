@@ -1,14 +1,16 @@
-<p id="notice"><%= notice %></p>
+<%= form_for(@phone, html: { class: "basic-grey" }) do |f| %>
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @phone.phone %>
-</p>
+	<p>
+	  <strong>Phone:</strong>
+	  <%= @phone.phone %>
+	</p>
 
-<p>
-  <strong>Contact:</strong>
-  <%= @phone.contact %>
-</p>
+	<p>
+	  <strong>Contact:</strong>
+	  <%= @phone.contact.nome %>
+	</p>
 
-<%= link_to 'Edit', edit_phone_path(@phone) %> |
-<%= link_to 'Back', phones_path %>
+	<%= link_to 'Edit', edit_phone_path(@phone) , class: "button"%> |
+    <%= link_to 'Voltar', phones_path, class: "button-back" %>
+<% end %>

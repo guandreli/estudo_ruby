@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+print "Gerando Tipos (Kinds)... "
+3.times do |i|
+	Kind.create!(description: Faker::Lorem.word)
+end
+puts "OK"
+

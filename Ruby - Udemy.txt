@@ -294,3 +294,38 @@ Partials (reutilização de codigo): arquivos com underline -> _partials
 
 Aula 34:
 Mudança no Layout, HTML / CSS
+
+Aula 35:
+Rails Console
+	rails c || rails console (abre um console com a aplicação já importada)
+(comandos abaixo dados no console)
+Active Record - CRUD
+	C:
+	var = <tabela_modelo>.new (depois de criar a variavel tem que colocar o valor desejado em uma coluna e depois salvar "var.save")
+	var = <tabela_modelo>.create(coluna_tabela: "valor") (já faz o processo de salvar)
+	R:
+	<tabela_modelo>.all (select * from)
+	<tabela_modelo>.first (seleciona o primeiro, ordenado pela PK)
+	<tabela_modelo>.last (seleciona o ultimo)
+	<tabela_modelo>.where(coluna_tabela: "valor") (select * from <tabela_modelo> where coluna_tabela = "valor")
+	U:
+	var = <tabela_modelo>.find(coluna: "valor")
+		var.coluna_tabela = "valor"
+		var.save
+		OU
+		var.update(coluna_tabela: "valor")
+	D:
+	var = <tabela_modelo>.valor (valor aqui pode ser o last, first, all)
+	(fora do console) rake db:drop (apaga todo o banco de dados (depois tem que criar e migrar de novo))
+
+Aula 36:
+Seeds e Task
+Task -> são as tarefas do rails
+
+Seed -> pelo que entendi é o que eu configuro as tarefas (caminho: db/seeds.rb), no exemplo dado para o professor, é utilizado para popular o banco de dados.
+	rake db:seed (executa o que esta dentro do seeds.rb)
+	rake -T -(mostra as rake disponiveis para nossa aplicação)
+
+Aula 37:
+Criando a propria tarefa (task)
+	rails g task <nome> <ação> (após a criação é informado o caminho onde foi criado o arquivo e da para consulta em rake -T)

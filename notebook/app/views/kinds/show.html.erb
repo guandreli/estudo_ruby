@@ -1,9 +1,10 @@
-<p id="notice"><%= notice %></p>
+<%= form_for(@kind, html: { class: "basic-grey" }) do |f| %>
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @kind.description %>
-</p>
-
-<%= link_to 'Edit', edit_kind_path(@kind) %> |
-<%= link_to 'Back', kinds_path %>
+	<p>
+	  <strong>Description:</strong>
+	  <%= @kind.description %>
+	</p>
+	<%= link_to 'Edit', edit_kind_path(@kind), class: "button" %> |
+	<%= link_to 'Voltar', kinds_path, class: "button-back" %>
+<% end %>

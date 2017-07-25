@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 print "Gerando Tipos (Kinds)... "
-3.times do |i|
-	Kind.create!(description: Faker::Lorem.word)
-end
+Kind.create!(description: "Contato")
+Kind.create!(description: "Amigo")
+Kind.create!(description: "Comercio")
 puts "OK"
 

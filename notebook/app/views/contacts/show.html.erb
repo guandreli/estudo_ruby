@@ -2,7 +2,7 @@
 	<p id="notice"><%= notice %></p>
 
 	<p>
-	  <strong>Nome:</strong>
+	  <strong><%= Contact.human_attribute_name('nome') %>:</strong>
 	  <%= @contact.nome %>
 	</p>
 
@@ -17,7 +17,7 @@
 	</p>
 
 	<p>
-	  <strong>Rmk:</strong>
+	  <strong><%= Contact.human_attribute_name('rmk') %>:</strong>
 	  <%= @contact.rmk %>
 	</p>
 

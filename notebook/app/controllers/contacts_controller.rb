@@ -15,6 +15,8 @@ class ContactsController < ApplicationController
   # GET /contacts/new
   def new
     @contact = Contact.new
+    @contact.build_address
+
     kind_select
   end
 
@@ -58,7 +60,7 @@ class ContactsController < ApplicationController
   def destroy
     @contact.destroy
     respond_to do |format|
-      format.html { redirect_to contacts_url, notice: 'Contact was successfully destroyed.' }
+      format.html { redirect_to contacts_url, notice: t('mensages.destroyed') }
       format.json { head :no_content }
     end
   end
@@ -76,6 +78,8 @@ class ContactsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_params
-      params.require(:contact).permit(:nome, :email, :kind_id, :rmk)
+      params.require(:contact).permit(:nome, :email, :kind_id, :rmk,
+                                        address_attributes: [:street, :city, :state],
+                                        phones_attribues:[:id, :phone])
     end
 end

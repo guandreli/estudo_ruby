@@ -80,6 +80,6 @@ class ContactsController < ApplicationController
     def contact_params
       params.require(:contact).permit(:nome, :email, :kind_id, :rmk,
                                         address_attributes: [:street, :city, :state],
-                                        phones_attribues:[:id, :phone])
+                                        phones_attributes:[:id, :phone, :_destroy])
     end
 end

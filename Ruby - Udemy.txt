@@ -372,3 +372,17 @@ Active Record -> has_many
 	Exemplo	".create"
 		var.Tabela.last
 		var.referencia_outra_tabela.create(chave1: "valor1", chaveN: "valorN")
+
+Aula 45 e 46:
+has_many
+Inserção dinamica do telefone
+	passo 1: instalar a gem "cocoon"
+	passo 2: alterar o arquivo application.js
+		-> //= require cocoon (isso fara que o JQuery busque da biblioteca cocoon)
+	passo 3: alterar o model o parametro has_many
+		-> reject_if: all_blank, allow_destroy :true (ele vai ignorar os dados se estiver em branco e permite apagar o dado se necessário)
+	passo 4: alterar os parametros no controller
+		-> :_destroy
+
+helper:
+	link_to_add_association (permite adicionar outro dado)

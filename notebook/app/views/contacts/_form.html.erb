@@ -1,7 +1,8 @@
 <%= form_for(@contact, html: { class: "basic-grey" }) do |f| %>
+
   <% if @contact.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+      <h2><%= "#{pluralize(@contact.errors.count, t('mensages.errors'))}" %></h2>
 
       <ul>
       <% @contact.errors.full_messages.each do |message| %>
@@ -48,8 +49,8 @@
     
     
     <div class="field">
-      <%= f.label :phones, ">" %><br>
-      <%= link_to_add_association('[Adicionar Telefone]', f, :phones) %>
+      <%= f.label :phones, "Telefone" %><br>
+      <%= link_to_add_association("[+]", f, :phones, class: "button") %>
     </div>
   </div>
   
@@ -58,8 +59,9 @@
     <%= f.text_area :rmk %>
   </div>
   <div align="center" class="actions">
-    <%= f.submit "Salvar", class: "button-submit" %>
-    <%= link_to 'Voltar', contacts_path, class: "button-back" %>
-    <%= link_to 'Home', root_path, class: "button-home" %>
+    <%= f.submit "Salvar", class: "button" %>
+    <%= link_to "Voltar", contacts_path, class: "button" %>
+    <%= link_to "Home", root_path, class: "button" %>
   </div>
+  
 <% end %>

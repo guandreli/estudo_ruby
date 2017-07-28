@@ -30,8 +30,8 @@
     <%= collection_select(:address, :contact_id, @contacts_select_all, :id, :nome) %>
   </div>
   <div class="actions">
-    <%= f.submit "Salvar", class: "button-submit" %>
-    <%= link_to 'Voltar', addresses_path, class: "button-back" %>
-    <%= link_to 'Home', root_path, class: "button-home" %>
+    <%= f.submit "Salvar", class: "button" %>
+    <%= link_to 'Voltar', addresses_path, class: "button" %>
+    <%= link_to 'Home', root_path, class: "button" %>
   </div>
 <% end %>

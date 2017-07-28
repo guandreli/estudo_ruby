@@ -2,7 +2,7 @@
 	<p id="notice"><%= notice %></p>
 
 	<p>
-	  <strong><%= Contact.human_attribute_name('nome') %>:</strong>
+	  <strong><%= Contact.human_attribute_name("nome") %>:</strong>
 	  <%= @contact.nome %>
 	</p>
 
@@ -17,10 +17,10 @@
 	</p>
 
 	<p>
-	  <strong><%= Contact.human_attribute_name('rmk') %>:</strong>
+	  <strong><%= Contact.human_attribute_name("rmk") %>:</strong>
 	  <%= @contact.rmk %>
 	</p>
 
-	<%= link_to 'Edit', edit_contact_path(@contact), class: "button" %> |
-	<%= link_to 'Voltar', contacts_path, class: "button-back" %>
+	<%= link_to "Edit", edit_contact_path(@contact), class: "button" %> |
+	<%= link_to "Voltar", contacts_path, class: "button" %>
 <% end %>

@@ -4,7 +4,7 @@ class KindsController < ApplicationController
   # GET /kinds
   # GET /kinds.json
   def index
-    @kinds = Kind.all
+    @kinds = Kind.order(:description).page(params[:page])
   end
 
   # GET /kinds/1

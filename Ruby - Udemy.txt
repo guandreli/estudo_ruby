@@ -386,3 +386,22 @@ Inserção dinamica do telefone
 
 helper:
 	link_to_add_association (permite adicionar outro dado)
+
+Aula 47:
+Alterando mais um pouco o visual
+helper: cycle ('cor1', 'cor2') [mescla as cores da tabela]
+
+Aula 48:
+Paginação
+	gem will_paginate (antiga)
+	gem kaminari
+		alterar o controller#index (para fazer a separação)
+		alterar a view (aparecer a paginação)
+
+Aula 49
+Validação no Back-end
+	Active Record Validations (validação do campo, se é numero, emails ... alterar o model desejado)
+	c = Model.new
+	c.valid? (valida se os valores informados são validos)
+	c.errors.messages (informa qual o erro, caso tenha)
+

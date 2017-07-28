@@ -1,10 +1,11 @@
 class PhonesController < ApplicationController
   before_action :set_phone, only: [:show, :edit, :update, :destroy]
+  before_action :set_contact_select, only: [:new, :edit, :update, :create]
 
   # GET /phones
   # GET /phones.json
   def index
-    @phones = Phone.all
+    @phones = Phone.order(:contact_id).page(params[:page])
   end
 
   # GET /phones/1
@@ -15,12 +16,10 @@ class PhonesController < ApplicationController
   # GET /phones/new
   def new
     @phone = Phone.new
-    contact_select
   end
 
   # GET /phones/1/edit
   def edit
-    contact_select
   end
 
   # POST /phones
@@ -65,7 +64,7 @@ class PhonesController < ApplicationController
 
   private
 
-    def contact_select
+    def set_contact_select
       @contacts_select_all = Contact.order(:nome)
     end
 

@@ -94,6 +94,7 @@ GEM
     minitest (5.8.4)
     multi_json (1.11.2)
     nokogiri (1.6.7.2)
+    pg (0.21.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -129,6 +130,11 @@ GEM
     rails-i18n (4.0.9)
       i18n (~> 0.7)
       railties (~> 4.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (4.2.6)
       actionpack (= 4.2.6)
       activesupport (= 4.2.6)
@@ -185,11 +191,13 @@ DEPENDENCIES
   kaminari
   kaminari-i18n (~> 0.3.2)
   lerolero_generator
+  pg
   pry-rails
   rails (= 4.2.6)
   rails-assets-bootstrap (= 3.3.6)!
   rails-assets-notifyjs!
   rails-i18n (~> 4.0.0)
+  rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

@@ -1,11 +1,12 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
   before_action :set_kind_select, only: [:new, :edit, :update, :create]
+  http_basic_authenticate_with name: "abc", password: "123", only: :destroy
 
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.order(:nome).page(params[:page])
+    @contacts = Contact.order(:nome).page(params[:page]).per(15)
   end
 
   # GET /contacts/1
@@ -30,7 +31,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
+        format.html { redirect_to contacts_path, notice: I18n.t("mensages.created") }
         format.json { render :show, status: :created, location: @contact }
       else
         format.html { render :new }
@@ -44,7 +45,7 @@ class ContactsController < ApplicationController
   def update
     respond_to do |format|
       if @contact.update(contact_params)
-        format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
+        format.html { redirect_to contacts_path, notice: I18n.t("mensages.updated") }
         format.json { render :show, status: :ok, location: @contact }
       else
         format.html { render :edit }

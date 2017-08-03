@@ -49,8 +49,8 @@
     
     
     <div class="field">
-      <%= f.label :phones, "Telefone" %><br>
-      <%= link_to_add_association("[+]", f, :phones, class: "button") %>
+      <%= f.label :phones, "<span class='glyphicon glyphicon-phone-alt' aria-hidden='true'></span>".html_safe %><br>
+      <%= link_to_add_association("[+]", f, :phones, class: "btn btn-primary") %>
     </div>
   </div>
   
@@ -59,9 +59,9 @@
     <%= f.text_area :rmk %>
   </div>
   <div align="center" class="actions">
-    <%= f.submit "Salvar", class: "button" %>
-    <%= link_to "Voltar", contacts_path, class: "button" %>
-    <%= link_to "Home", root_path, class: "button" %>
+    <%= f.submit "Salvar", class: "btn btn-primary" %>
+    <%= link_to "Voltar", contacts_path, class: "btn btn-danger" %>
+    <%= link_to "Home", root_path, class: "btn btn-success" %>
   </div>
   
 <% end %>

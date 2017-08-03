@@ -34,9 +34,11 @@
   buttons:
     show: Mostrar
     edit: Editar
-    destroy: Destruir
+    destroy: Excluir
   mensages:
     confirm: Confirma a ação?
     list: Lista
-    destroyed: Objeto destruido
+    destroyed: Objeto excluido com sucesso
     errors: erros ocorram
+    created: Objeto salvo com sucesso
+    updated: Objeto atualizado com sucesso

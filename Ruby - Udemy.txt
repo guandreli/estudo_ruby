@@ -398,10 +398,71 @@ Paginação
 		alterar o controller#index (para fazer a separação)
 		alterar a view (aparecer a paginação)
 
-Aula 49
+Aula 49:
 Validação no Back-end
 	Active Record Validations (validação do campo, se é numero, emails ... alterar o model desejado)
 	c = Model.new
 	c.valid? (valida se os valores informados são validos)
 	c.errors.messages (informa qual o erro, caso tenha)
 
+Aula 50 e 51:
+Assets Pipeline -> serve para concatenar, minificar e/ou comprimir o tamanho dos arquivos para melhorar o desempenho de arquivos JS ou CSS
+
+	app/assets (são os assets criados pela propria aplicação)
+	lib/assets (são as assets criadas por mim)
+	vendor/assets (são as assets de terceiros, já prontas, não criadas por mim nem pelo rails)
+
+	app/views/layouts/application.html.erb (chama os assets)
+	app/assets/stylesheets/application.css (é alguma treta importante)
+	config/initializers/assets.rb (Ao adicionarmos um novo arquivo de asset ao Rails é necessário registrá-lo aqui)
+
+Aula 52:
+AJAX -> ajuda a interação entre o usuário e a aplicação
+	remote: true (passa a ação como JS)
+	respond_to (verifica como foi passada a ação, se é HTML, Json, JS)
+
+Aula 53:
+Inserindo o arquivo JS notify
+
+-> https://notifyjs.com/
+	javascript_include_tag 'arquivo_JS' (chama pelo caminho "app/views/layouts/application.html.erb" e depois passa o caminho dentro de "config/initalizers.assets.rb")
+
+Aula 54:
+Bower (tipo o gemfile do JS)
+	https://bower.io/
+	https://bower.io/search/
+
+	rake bower:install (instalar as dependencias)
+	após a criação deve se passar o caminho em application.js
+
+Aula 55:
+Rails-Assets (é o bower melhorado)
+	https://rails-assets.org
+	insere no GemFile depois no application.js
+
+Aula 56:
+Assets
+	rake -T assets
+	rake assets:precompile (cria os arquivos temporários)
+	rake assets:clobber (deleta os arquivos criados a cima)
+
+	rake -T log
+	rake log:clear (limpa o "/log/development.log" [esse é o log gerado no terminal, pode ser mandado para alguem analisar, ver se há um erro])
+
+	rake -T tmp
+	rake tmp:clear (limpa os arquivos temporarios "/tmp")
+
+	https://gist.github.com/ (posso pesquisar solução de erros pareciso com os meus)
+
+Aula 57:
+HTTP Basic Authentication
+	http://guides.rubyonrails.org/v4.2/getting_started.html#basic-authentication
+
+Aula 58:
+Templates Engine
+	.haml (enxuta a sintaxe HTML com o Ruby)
+	Slim (mesma coisa)
+
+Form Builders
+	Formastic Gem 
+	Simpleform Gem (ambos são Gems para auxiliar na criação de formulários)

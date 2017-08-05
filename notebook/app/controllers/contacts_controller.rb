@@ -1,7 +1,6 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
   before_action :set_kind_select, only: [:new, :edit, :update, :create]
-  http_basic_authenticate_with name: "abc", password: "123", only: :destroy
 
   # GET /contacts
   # GET /contacts.json
@@ -59,7 +58,7 @@ class ContactsController < ApplicationController
   def destroy
     @contact.destroy
     respond_to do |format|
-      format.html { redirect_to contacts_url, notice: t('mensages.destroyed') }
+      format.html { redirect_to contacts_path, notice: I18n.t('mensages.destroyed') }
       format.json { head :no_content }
     end
   end

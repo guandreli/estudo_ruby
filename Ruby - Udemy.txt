@@ -1,0 +1,468 @@
+MÓDULO 1
+
+Aula 04:
+- Referencia sobre o Ruby;
+- Filosofias do Ruby.
+
+Aula 05:
+- Aviso e como utilizar o Code Anyweare.
+
+Aula 06: Um pouco mais Sobre Gem's
+- Listar gem's
+gem list nome_da_gem (opcional)
+
+- Instalar gem
+gem install nome_da_gem -v (versão opcicional, se não por adiciona a mais atual)
+
+- Remover gem
+gem unistall nome_da_gem --version ou -v (versão opcicional, se não por pergunta qual quero remover)
+gem cleanup nome_da_gem (remove todas as versões, deixa apenas a mais atual)
+
+Aula 07:
+- Bundler (gerenciamento de Gem's)
+
+GemFile -> configura de onde serão pego as gem's
+bundle install (instala as gem's do repositório configurada no arquivo)
+
+Aula 08:
+- Subir o projeto
+Mostra como alterar o nome do projeto, como subir o projeto, baixar as versões desejadas entre outras.
+
+Subir o projeto (localhost:port) a porta é exibidad:
+-> rails s
+-> rails server
+
+Aula 09:
+- Estrutura das pastas
+Explica sobre as pastas, qual funcionalidade, qual a serventia de cada uma
+
+Aula 10:
+- Explica como "executar" ruby (ruby arquivo | irb | pry)
+
+ruby arquivo.rb || ruby arquivo (executa um aquivo)
+irb (codar no terminal)
+pry (semelhante ao irb, apenas colore as palavras reservadas)
+
+Aula 11:
+- Orientação a Objeto
+
+Classe -> Possui atributos e metodos, é o "esqueleto" a forma para a criação do objeto
+Objeto -> Objeto é a construção resultante da classe
+
+Aula 12:
+
+STDIN -> Entrada de dados
+gets -> get (pegar) s (string)
+\n -> quebra de linha
+.inspect -> inspeciona o que esta na variavel
+
+Condições
+if (elsif, else)
+	if condição
+		codigo
+	elsif condição
+		codigo
+	else
+		codigo
+	end
+
+unless (else - não aceita elsif, é um ou ou outro) (a menos q)
+	unless condição
+		codigo
+	else
+		código
+	end
+
+case (when - geralmente usado em menu)
+	case a
+	when 1
+		código
+	when 2
+		código
+	end
+
+<condição> ? <verdadeiro> : <falso> (pode substituir o if)
+	(1 < 2) ? (puts "sim") : (puts "não")
+
+Loops
+	while a < 10
+		código	
+	end
+
+	until a == 0 (até que "a" seja 0, faça)
+
+	for a in 0..3 do(para "a" entre 0 a 3 faça)
+		código
+	end
+	
+	a.each do |b| (para cada "a" faça "b")
+		código
+	end
+
+
+Aula 13:
+Array (vetor)
+	a = [1, 2, 3, "a", "b", "c"]
+	
+	b = Array.new
+	b.push(1, "a") -> criou a array e inseriu os valores
+
+ARGV (argument vector)
+	pelo que entendi passa os valores na chamada da função
+
+Hashes
+	h = {"a" => 123, "b" => 456, 1 => "abc"}
+nesse exemplo o "a" é a chave e o 123 é o valor (pensar como no vetor, a é o indici e  123 é o valor)
+	h.merge!({2 => "def"}) -> adiciona a chave 2 e o valor "def" a hashe "h"
+
+ 
+Aula 14:
+Interpolação string -> imprime variavelconcatenando
+	puts "string #{var}"
+Concatenar
+	string + string -> criado um novo objeto
+	string << string  -> concatena no mesmo objeto (gera menos requisição)
+Simbolos -> strings imutavel, um tipo objeto do Ruby (utilizadas usualmente em hashes)
+	:string
+	h = {a: "abc", b: 123}
+
+
+Aula 15:
+Metodos
+array.push(valor) -> adiciona o valor como ultimo elemento do vetor
+array.unshift(valor) -> adiciona o valor na primeira posição
+array.pop -> remove o ultimo valor
+array.shift -> remove o primeiro
+
+criar metodo:
+	def <nome>
+		codigo
+	end
+
+Aula 16:
+tipo definido -> VAR = "em maiusculo"
+join -> array.join("colocar algo se quiser, se não junta junto :D")
+eval -> interpreta uma STRING em codigo Ruby
+	a = "1 + 2" (string)
+	puts eval(a) #saida: 3
+	b = "puts a"
+	puts eval(b) #saida: 1 + 2 (imprimiu a string 'a')
+instance_of?(tipo) -> compara se a entrada é uma instancia daquele tipo 
+	a = 1
+	a.instance_of?(String) -> False
+	a.instance_of?(Fixnun) -> True
+	!a.instance_of?(String) -> True (esta negando)
+
+Aula 17:
+Clases -> classe instanciada é um objeto
+initialize -> inicialização da classe (@variavel)
+attr_accessor :var -> cria uma variavel na classe com o metodo de leitura e escrita
+	class Classe (sempre começa com maiuscula)
+		attr_accessor :var
+		def initialize (var)
+			@var = var
+		end
+	end
+
+Aula 18:
+Classe e Herança -> para uma classe herdar uma outra basta usar o menor (<)
+	arquivo 1:
+		classe a
+			cod
+		end
+
+	aquivo 2
+		require_relative "arquivo 1" (chamando o "arquivo 1")
+		classe b < a (herdando o que tem em "a")
+			cod
+		end
+Aula 19:
+Modulos -> Agem como Namespace, permite armazenar constantes, métodos e classe
+	Module Modulo (maiuscula, assim como a Classe)
+		cod
+	end
+
+
+Aula 20:
+	require "nome_gem" (chamar a gem dentro da execução ou arquivo)
+	gem_alias.funcao (executa uma função da gem)
+
+Aula 21:
+	rails new projeto (inicia um projeto rails com nome "projeto")
+	rails s (coloca para execução local inicia na base de desenvolvimento)
+	rails s -e PRODUCTION / TEST (-e acessa a uma base, de produção ou teste)
+
+Aula 22:
+Prototipação (fazer um esboço de como ficaria o projeto)
+O professor utiliza o Pencil Project (pencil.evolus.vn)
+
+Aula 23:
+Modelagem de dados (modelagem do banco de dados)
+Professor utiliza o Oracle SQL Data Modeler
+Convenções:
+	-> Tableas em plurais
+	-> ID com auto increment
+	-> tabela_id para referenciar a outra tabela (foreign key)
+
+Aula 24:
+Arquitetura MVC (Model View Controller)
+	-> Model (modelo) são as regras, dados e como ele deve funcionar
+	-> View (visão) é a saida, como vou representar o dado
+	-> Controller (controlador), ele controla a ação do usuário
+
+Aula 25:
+CRUD (Create Read Update Delete)
+	-> Create (criar), seria o INSERT na tabela
+	-> Read (ler), é equivalente ao SELECT
+	-> Update (atualizar), é o proprio atualizar mesmo
+	-> Delete (deletar), é deletar mesmo
+
+Scaffold (andaime), auxilia na criação do BD do projeto
+	rails generate scaffold Banco nome_coluna:tipo_valor
+	rais g scaffold Banco nome_coluna:tipo_valor
+	
+	-> Banco no singular, e primeira letra maiuscula
+
+	rails g scaffold Exemplo e1:string
+
+Aula 26:
+ORM (Object Relational Mapper), faz a relação do nosso objeto com o dado do banco de dados
+	ActiveRecord -> substitui um trexo de SQL (http://guides.rubyonrails.org/active_record_basics.html)
+	@exemplo = Exemplo.all -> faz o SELECT * FROM
+
+Migration, faz a migração e o controle dos dados criados pelo meu Scaffold para o banco de dados
+	reke db:create -> cria nosso banco de dados
+	rake db:migrete -> migra os scaffolds para o BD, cria as tabelas
+
+Aula 27:
+Acessando os controladores, relação da view com o controller
+	https://url-padrão/nome-do-controller
+Lembrando da Arquitetura MVC
+A View é o que o usuário vê (alterações nas partes visuais são feitas aqui)
+Controller faz o controle das ações
+
+Aula 28:
+Criando controller
+	rails g controller nome_controller ação (na criação é mostrada a rota)
+Alterando a rota para cair na home
+	projeto/config/routs.rb (dentro do arquivo tem as dicas)
+
+Aula 29:
+ERB - Embedded Ruby (mistura codigo HTML com Ruby)
+	Para iniciar o Ruby dentro do HTML:
+	<% codigo %> (sem output, ou seja, sem saida de dados)
+	<%= codigo %> (tem output, saida de dados)
+
+Aula 30
+Helpers -> são tipo funções já definidas em Ruby, posso criar dentro de "app/helpers", dentro de um helper de um controller (vai funcionar só para aquele especificamente) ou no geral "application_helper" (funcionará para todos)
+
+api.rubyonrails.org (documentação oficial)
+apidock.com/rails (documentação mais contribuição)
+
+exemplo:
+	<%= link_to "nome", rota %> (substitui: <a href="rota">nome</a>)
+
+Aula 31:
+Configuração de rota
+
+
+Verbos HTTP
+	Get (mostra na url o a ação)
+	Post (esconde as informações)
+
+Devido as compicações o REST criou outros verbos
+	Put (mesmo de cima)
+	Get (mesmo de cima)
+	Delete (deletar)
+	Post (ler)
+O REST está intrinsecamente ligado aos resources
+
+Aula 32:
+Criando a caixa de seleção (dados estão no BD), helper: collection_select
+	collection_select(object, method, collection, value_method, text_method, options = {}, html_options = {})
+	object é a classe que vai receber o valor
+	method é campo que vai receber o valor
+	collection é de onde virao os dados
+	value_method é o valor que vai receber
+	text_method é o texto que vai aparecer para o usuário
+
+Para fazer isso alterei o _form.html.erb e o controller do que estou editando
+
+Aula 33:
+Partials (reutilização de codigo): arquivos com underline -> _partials
+	(convenção: criar uma pasta "shared" e colocar os partials lá | passar o caminho a partir da view)
+
+Aula 34:
+Mudança no Layout, HTML / CSS
+
+Aula 35:
+Rails Console
+	rails c || rails console (abre um console com a aplicação já importada)
+(comandos abaixo dados no console)
+Active Record - CRUD
+	C:
+	var = <tabela_modelo>.new (depois de criar a variavel tem que colocar o valor desejado em uma coluna e depois salvar "var.save")
+	var = <tabela_modelo>.create(coluna_tabela: "valor") (já faz o processo de salvar)
+	R:
+	<tabela_modelo>.all (select * from)
+	<tabela_modelo>.first (seleciona o primeiro, ordenado pela PK)
+	<tabela_modelo>.last (seleciona o ultimo)
+	<tabela_modelo>.where(coluna_tabela: "valor") (select * from <tabela_modelo> where coluna_tabela = "valor")
+	U:
+	var = <tabela_modelo>.find(coluna: "valor")
+		var.coluna_tabela = "valor"
+		var.save
+		OU
+		var.update(coluna_tabela: "valor")
+	D:
+	var = <tabela_modelo>.valor (valor aqui pode ser o last, first, all)
+	(fora do console) rake db:drop (apaga todo o banco de dados (depois tem que criar e migrar de novo))
+
+Aula 36:
+Seeds e Task
+Task -> são as tarefas do rails
+
+Seed -> pelo que entendi é o que eu configuro as tarefas (caminho: db/seeds.rb), no exemplo dado para o professor, é utilizado para popular o banco de dados.
+	rake db:seed (executa o que esta dentro do seeds.rb)
+	rake -T -(mostra as rake disponiveis para nossa aplicação)
+
+Aula 37:
+Criando a propria tarefa (task)
+	rails g task <nome> <ação> (após a criação é informado o caminho onde foi criado o arquivo e da para consulta em rake -T)
+
+Aula 38:
+Associações
+	belongs_to (está relacionado à foreign key da tabela em questão)
+	has_one (permite uma tabela consultar dados disponiveis na tabela relacionada)
+
+Aula 39 e 40:
+Formulario complexo
+
+Parametros (params)
+	params{tabela_eu_acho: {coluna1: "valor1", coluna2: "valor2", outra_tabela_attributes: {outra_coluna1: "outro_valor1"}}}
+	accepts_nested_attributes_for (permite a entrada de dados de uma tabela a partir de outra)
+
+Helper fields_for (permite usar os atributos alnhados [nested_attributes])
+
+aula 41:
+I18N (Intertionalization) -> Tradução lero lero
+	I18N.translate || I18N.t -> traduz textos e outros
+	I18N.localize || I18N.l-> transforma por exemplo data e hora no formato do local de acesso
+
+alterar em "config/application.rb" (altera em todas as bases, caso quiser em uma especifica vou em "config/enviroment/BASE")
+
+Aula 42:
+Caixa de seleção para estado (não esta no BD)
+Testar os helpers no rails console
+	<Controller>.helpers.<helper>
+	puts <Controller>.helpers.<helper> (mostra como seria no HTML)
+
+	select
+	options_for_select -> o conjunto dos dois servem para criar caixa de seleção para dados não contidos no BD
+
+Aula 43:
+Arrumando o site
+	ele utiliza gems e I18N para alterar um pouco mais o visual
+	<Model>.human_attribute_name("nome") [serve para atualizar os nomes tbm]
+
+Aula 44:
+Active Record -> has_many
+	Exemplo "<<""
+		var.referencia_tabela << Outra_tabela (atribui os dados da outra tabela a 'var')
+	Exemplo	".create"
+		var.Tabela.last
+		var.referencia_outra_tabela.create(chave1: "valor1", chaveN: "valorN")
+
+Aula 45 e 46:
+has_many
+Inserção dinamica do telefone
+	passo 1: instalar a gem "cocoon"
+	passo 2: alterar o arquivo application.js
+		-> //= require cocoon (isso fara que o JQuery busque da biblioteca cocoon)
+	passo 3: alterar o model o parametro has_many
+		-> reject_if: all_blank, allow_destroy :true (ele vai ignorar os dados se estiver em branco e permite apagar o dado se necessário)
+	passo 4: alterar os parametros no controller
+		-> :_destroy
+
+helper:
+	link_to_add_association (permite adicionar outro dado)
+
+Aula 47:
+Alterando mais um pouco o visual
+helper: cycle ('cor1', 'cor2') [mescla as cores da tabela]
+
+Aula 48:
+Paginação
+	gem will_paginate (antiga)
+	gem kaminari
+		alterar o controller#index (para fazer a separação)
+		alterar a view (aparecer a paginação)
+
+Aula 49:
+Validação no Back-end
+	Active Record Validations (validação do campo, se é numero, emails ... alterar o model desejado)
+	c = Model.new
+	c.valid? (valida se os valores informados são validos)
+	c.errors.messages (informa qual o erro, caso tenha)
+
+Aula 50 e 51:
+Assets Pipeline -> serve para concatenar, minificar e/ou comprimir o tamanho dos arquivos para melhorar o desempenho de arquivos JS ou CSS
+
+	app/assets (são os assets criados pela propria aplicação)
+	lib/assets (são as assets criadas por mim)
+	vendor/assets (são as assets de terceiros, já prontas, não criadas por mim nem pelo rails)
+
+	app/views/layouts/application.html.erb (chama os assets)
+	app/assets/stylesheets/application.css (é alguma treta importante)
+	config/initializers/assets.rb (Ao adicionarmos um novo arquivo de asset ao Rails é necessário registrá-lo aqui)
+
+Aula 52:
+AJAX -> ajuda a interação entre o usuário e a aplicação
+	remote: true (passa a ação como JS)
+	respond_to (verifica como foi passada a ação, se é HTML, Json, JS)
+
+Aula 53:
+Inserindo o arquivo JS notify
+
+-> https://notifyjs.com/
+	javascript_include_tag 'arquivo_JS' (chama pelo caminho "app/views/layouts/application.html.erb" e depois passa o caminho dentro de "config/initalizers.assets.rb")
+
+Aula 54:
+Bower (tipo o gemfile do JS)
+	https://bower.io/
+	https://bower.io/search/
+
+	rake bower:install (instalar as dependencias)
+	após a criação deve se passar o caminho em application.js
+
+Aula 55:
+Rails-Assets (é o bower melhorado)
+	https://rails-assets.org
+	insere no GemFile depois no application.js
+
+Aula 56:
+Assets
+	rake -T assets
+	rake assets:precompile (cria os arquivos temporários)
+	rake assets:clobber (deleta os arquivos criados a cima)
+
+	rake -T log
+	rake log:clear (limpa o "/log/development.log" [esse é o log gerado no terminal, pode ser mandado para alguem analisar, ver se há um erro])
+
+	rake -T tmp
+	rake tmp:clear (limpa os arquivos temporarios "/tmp")
+
+	https://gist.github.com/ (posso pesquisar solução de erros pareciso com os meus)
+
+Aula 57:
+HTTP Basic Authentication
+	http://guides.rubyonrails.org/v4.2/getting_started.html#basic-authentication
+
+Aula 58:
+Templates Engine
+	.haml (enxuta a sintaxe HTML com o Ruby)
+	Slim (mesma coisa)
+
+Form Builders
+	Formastic Gem 
+	Simpleform Gem (ambos são Gems para auxiliar na criação de formulários)

@@ -400,6 +400,8 @@ Paginação
 
 Aula 49:
 Validação no Back-end
+http://guides.rubyonrails.org/active_record_validations.html
+
 	Active Record Validations (validação do campo, se é numero, emails ... alterar o model desejado)
 	c = Model.new
 	c.valid? (valida se os valores informados são validos)
@@ -452,7 +454,7 @@ Assets
 	rake -T tmp
 	rake tmp:clear (limpa os arquivos temporarios "/tmp")
 
-	https://gist.github.com/ (posso pesquisar solução de erros pareciso com os meus)
+	https://gist.github.com/ (posso pesquisar solução de erros parecido com os meus)
 
 Aula 57:
 HTTP Basic Authentication

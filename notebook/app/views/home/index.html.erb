@@ -1,8 +1,15 @@
 <br>
 <div class="basic-grey">
 	<h1>Seja bem vindo!</h1>
-	<ul>
+	<% if user_signed_in? %>
+		<%= current_user.email %>
+		<p><ul>
 		<li><span class="glyphicon glyphicon-tags" aria-hidden="true"></span> <%= link_to "Tipos", kinds_path %></li>
 		<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <%= link_to "Contato", contacts_path %></li>
-	</ul>
+		</ul></p>
+		<%= link_to "Sair", destroy_user_session_path, method: :delete %>
+	<% else %>
+		<%= link_to "Login",  new_user_session_path%>
+		<%= link_to "Cadastrar",  new_user_registration_path%>
+	<% end %>
 </div>

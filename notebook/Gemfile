@@ -12,6 +12,10 @@ gem 'rails', '4.2.6'
 gem 'kaminari-i18n'
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Rails 3 and 4
 gem 'kaminari'
+#Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/…
+gem 'devise'
+# Translations for the devise gem
+gem 'devise-i18n'
 # Dynamic nested forms using jQuery made easy; works with formtastic, simple_form or default forms
 gem 'cocoon'
 # O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.

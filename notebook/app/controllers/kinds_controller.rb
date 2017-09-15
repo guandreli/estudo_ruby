@@ -1,5 +1,7 @@
 class KindsController < ApplicationController
   before_action :set_kind, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  #http_basic_authenticate_with name: "admin", password: "Helpoiu098", except: [:index, :show]
 
   # GET /kinds
   # GET /kinds.json
